@@ -8,10 +8,15 @@
 .navbar {
     width: 100vw;
     height: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background-color: rgb(44, 62, 80);
     position: fixed;
     padding: 5px;
+    
     z-index: 999;
+    
 }
 
 .navbar-list {
@@ -44,7 +49,6 @@ h1 {
 }
 
 .startBootstrapSection {
-    height: 100vh;
     background-color: rgb(26, 188, 156);
     display: flex;
     flex-direction: column;
@@ -224,7 +228,10 @@ h1 {
 
 }
 
-textarea {
+
+textarea,
+input {
+    height: 2rem;
     width: 5wv;
     font-family: Arial, sans-serif;
     color: #333;
@@ -233,7 +240,7 @@ textarea {
     border: 0;
     border-bottom: 1px solid rgb(206, 212, 218);
     resize: none;
-
+    margin-top: 1rem;
 }
 
 
@@ -313,3 +320,4 @@ label {
 .white-color {
     color: white;
 }
+

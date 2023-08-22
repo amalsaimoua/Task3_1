@@ -104,7 +104,7 @@
                         your email address to the contact form to make it fully function!</p>
                 </div>
                 <div class="button">
-                    <i class="fa-solid fa-download white-color"></i>
+                    <i class="fa-solid fa-download white-color "></i>
                     <h3 class="white-color">Free Download!</h3>
                 </div>
             </div>
@@ -118,14 +118,12 @@
                     <div class="line1 blue-bg-color"></div>
                 </div>
                 <form action="submit" class="contactForm">
-
-                    <textarea name="fullName" id="name" placeholder="Full name"></textarea>
-                    <textarea name="email" id="email" placeholder="E-mail address"></textarea>
-                    <textarea name="phoneNum" id="phoneNum" placeholder="Phone number" inputmode="numeric"></textarea>
+                    <input type="text" name="fullName" id="name" placeholder="Full name"></input>
+                    <input type="email" name="email" id="email" placeholder="E-mail address"></input>
+                    <input type="number" name="phoneNum" id="phoneNum" placeholder="Phone number"
+                        inputmode="numeric"></input>
                     <textarea name="message" id="message" style="resize: vertical;" placeholder="Message"></textarea>
-                    <div class="button">
-                        <h4 class="white-color">Send</h4>
-                    </div>
+                    <input class="button white-color" type="submit" value="Send">
                 </form>
             </div>
         </section>
