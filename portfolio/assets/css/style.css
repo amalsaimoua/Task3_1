@@ -6,37 +6,31 @@
 }
 
 .navbar {
-    width: 100vw;
-    height: 50px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     background-color: rgb(44, 62, 80);
     position: fixed;
-    padding: 5px;
-    
+    padding: 20px 40px;
     z-index: 999;
-    
+    top: 0;
 }
 
 .navbar-list {
-    list-style-type: none;
     display: flex;
-    padding: 10px;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
 
 }
 
-.logo {
-    width: 100%;
-    flex-wrap: nowrap;
-    font-weight: bolder;
 
-}
-
-.navbar-list a {
+.navbar-list a,
+.logo a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
     transition: background-color 0.3s;
 }
 
@@ -44,47 +38,69 @@
     background-color: #555;
 }
 
+
+.navbar .logo {
+    width: max-content;
+    flex-wrap: nowrap;
+    font-weight: bolder;
+
+}
+
+
 h1 {
-    font-size: xxx-large;
+    font-size: xx-large;
 }
 
 .startBootstrapSection {
+    min-width: 300px;
+    height: 100vh;
+    padding-top: 100px;
     background-color: rgb(26, 188, 156);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15vh;
+}
+
+.startBootstrapSection p {
+    text-align: center;
+
 }
 
 .startBootstrapSection .circle {
-    height: 13rem;
-    width: 13rem;
-    background-color: rgb(44, 62, 80);
-    margin: 20px 0;
-    border-radius: 7rem;
     position: relative;
 }
 
-.myPic img {
-    width: 13rem;
-    position: absolute;
-    left: 8rem;
+.startBootstrapSection .myPic {
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
-    transform: translate(-8rem, -3rem);
+    background-color: rgb(44, 62, 80);
 }
 
-.line-star {
-    height: 10vh;
-    width: 70vw;
+.startBootstrapSection .myPic img {
+    width: 220px;
+    position: absolute;
+    top: -10px;
+    border-radius: 50%;
+    transform: translate(0rem, -3rem);
+
+}
+
+.startBootstrapSection h1 {
+    text-align: center;
+}
+
+.line-star { 
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 4vh;
+    align-items: center;
+    padding: 20px;
 }
 
 .line1 {
-    width: 6vw;
+    width: 5rem;
     height: 4px;
     border-radius: 5px;
     margin: 2%;
@@ -92,6 +108,7 @@ h1 {
 
 .star-icon {
     font-size: xx-large;
+    padding: 0 10px;
 }
 
 .portfolioSection,
@@ -100,7 +117,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     padding: 30px;
 
 }
@@ -193,22 +209,22 @@ h1 {
 
 }
 
-.about-paragraphs {
+.about-paragraphs-container {
+    max-width: 50em;
     display: flex;
-    justify-content: center;
-    color: white;
     gap: 20px;
 }
 
-.about-paragraphs p {
-    font-size: larger;
-    width: 30rem;
-
+.p {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
 }
 
+
 .aboutSection .button {
-    width: 200px;
-    height: 60px;
+    width: 15em;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,8 +239,8 @@ h1 {
 .contactForm {
     display: flex;
     flex-direction: column;
-    width: 30vw;
-    gap: 15px;
+    min-width: 17em;
+    gap: 25px;
 
 }
 
@@ -265,13 +281,14 @@ label {
     cursor: pointer;
 }
 
-.footerSection {
+footer {
     display: flex;
-    justify-content: space-evenly;
+    text-align: center;
+    padding: 2em;
     flex-wrap: wrap;
-    align-items: center;
-    padding: 5%;
-    margin: 0 auto;
+    justify-content: space-around;
+    align-content: center;
+    gap: 2rem;
 }
 
 .footerSection div p {
@@ -281,7 +298,7 @@ label {
 .around-the-web .icons {
     display: flex;
     justify-content: space-between;
-    margin-top: 2.5rem;
+    margin-top: 10px;
 }
 
 .icons div {
@@ -300,6 +317,7 @@ label {
 }
 
 .copyright-bar {
+
     background-color: rgb(26, 37, 47);
     text-align: center;
     padding: 10px 0;
@@ -320,4 +338,17 @@ label {
 .white-color {
     color: white;
 }
+.navbar button{
+    display: none;
+    background: none;
+    border: none;
+}
+@media screen  and (max-width : 500px){
+    .navbar button{
+        display: block;
+    }
+    .navbar .navbar-list{
+        display: none;
 
+    }
+}
